@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { FaGithub, FaGitlab, FaLinkedin } from "react-icons/fa";
 import imagenFran from "../../../public/fgd-removebg-preview.png";
+import { motion } from "framer-motion"
 
 export default function Inicio() {
   return (
@@ -8,7 +11,12 @@ export default function Inicio() {
       {/* Nombre */}
       <h2 className="text-5xl py-2 font-medium text-blue-900">Fran Gallego</h2>
       {/* Ocupacion */}
-      <h3 className="text-2xl py-2">Desarrollador Web</h3>
+      <motion.div
+        animate={{ x: [0, 300, 0, -300, 0] }}
+        transition={{ duration: 8, repeat: Infinity }}
+      >
+        <h3 className="text-2xl py-2">Desarrollador Web</h3>
+      </motion.div>
       {/* Un poco de informacion */}
       <p className="text-md py-5 leading-8 text-gray-800">
         Desarrollador web apasionado por la creación de experiencias digitales
